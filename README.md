@@ -1,4 +1,4 @@
-# 💰 Finance Dashboard (React + Vite)
+# 💰 Finance Dashboard 
 
 ## 🔗 Live Demo
 https://finance-dashboard-yzd2.vercel.app/
