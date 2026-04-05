@@ -6,13 +6,15 @@ import { formatCurrency } from '../../utils/formatters';
 const BalanceChart = () => {
   const { data, darkMode } = useContext(FinanceContext);
 
-  // Process data to show balance over time
-  const chartData = data.transactions.slice().reverse().reduce((acc, t) => {
-    const lastBalance = acc.length > 0 ? acc[acc.length - 1].balance : 0;
-    const newBalance = t.type === 'income' ? lastBalance + Number(t.amount) : lastBalance - Number(t.amount);
-    acc.push({ date: t.date, balance: newBalance });
-    return acc;
-  }, []);
+  const chartData = data.transactions
+    .slice()
+    .sort((a, b) => new Date(a.date) - new Date(b.date))
+    .reduce((acc, t) => {
+      const lastBalance = acc.length > 0 ? acc[acc.length - 1].balance : 0;
+      const newBalance = t.type === 'income' ? lastBalance + Number(t.amount) : lastBalance - Number(t.amount);
+      acc.push({ date: t.date, balance: newBalance });
+      return acc;
+    }, []);
 
   return (
     <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 h-[350px]">
