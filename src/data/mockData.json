@@ -1,0 +1,17 @@
+{
+  "summary": {
+    "balance": 112800,
+    "income": 165000,
+    "expenses": 52200
+  },
+  "transactions": [
+    { "id": 1, "date": "2026-04-01", "amount": 150000, "category": "Monthly Salary", "type": "income" },
+    { "id": 2, "date": "2026-04-02", "amount": 18500, "category": "House Rent", "type": "expense" },
+    { "id": 3, "date": "2026-04-02", "amount": 12400, "category": "Groceries", "type": "expense" },
+    { "id": 4, "date": "2026-04-03", "amount": 15000, "category": "Freelance Project", "type": "income" },
+    { "id": 5, "date": "2026-04-03", "amount": 4200, "category": "Dining Out", "type": "expense" },
+    { "id": 6, "date": "2026-04-04", "amount": 8600, "category": "Electricity Bill", "type": "expense" },
+    { "id": 7, "date": "2026-04-04", "amount": 3500, "category": "Fuel/Transport", "type": "expense" },
+    { "id": 8, "date": "2026-04-05", "amount": 5000, "category": "Investment SIP", "type": "expense" }
+  ]
+}
